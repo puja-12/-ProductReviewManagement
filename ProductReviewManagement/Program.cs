@@ -42,10 +42,12 @@ namespace ProductReviewManagement
             productReviewList.Add(new ProductReview() { ProductID = 25, UserID = 12, Rating = 6, Review = "Good", isLike = false });
 
             //Display list
-            foreach (var list in productReviewList)
-            {
-                Console.WriteLine("ProductID :" + list.ProductID + "  " + "UserID :" + list.UserID + "  " + "Rating :" + list.Rating + "  " + "Review :" + list.Review + "  " + "isLike :" + list.isLike);
-            }
+            //foreach (var list in productReviewList)
+            //{
+             //   Console.WriteLine("ProductID :" + list.ProductID + "  " + "UserID :" + list.UserID + "  " + "Rating :" + list.Rating + "  " + "Review :" + list.Review + "  " + "isLike :" + list.isLike);
+           // }
+            Management management = new Management();
+            management.TopRecords(productReviewList);
         }
     }
 }
