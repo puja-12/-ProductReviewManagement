@@ -113,6 +113,19 @@ namespace ProductReviewManagement
                 Console.WriteLine("--------------------------------------------------------");
                 Console.WriteLine($"{row["ProductId"]}\t|{row["UserId"]}\t|{row["Rating"]}\t|{row["Review"]}\t|{row["Islike"]}");
             }
+          
+        }
+        public void RetriveRecords_IsLike_True(List<ProductReview> productReviewList)
+        {
+            var ProductData1 = (from productReview in productReviewList
+                                where (productReview.isLike == true)
+                                select productReview);
+
+            foreach (var list in ProductData1)
+            {
+                Console.WriteLine("ProductID :" + list.ProductID + "  " + "UserID :" + list.UserID + "  " + "Rating :" + list.Rating + "  " + "Review :" + list.Review + "  " + "isLike :" + list.isLike);
+            }
         }
     }
 }
+    
