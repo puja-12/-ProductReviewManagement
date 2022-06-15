@@ -148,6 +148,20 @@ namespace ProductReviewManagement
                       + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "IsLike:- " + list.isLike);
             }
         }
+
+        public void RetriveRecordsUser1d_10(List<ProductReview> productreviewlist)
+        {
+            foreach (var list in (from productReviews in productreviewlist
+                                  where productReviews.UserID == 10
+                                  orderby productReviews.Rating
+                                  select productReviews))
+            {
+                Console.WriteLine("ProductID:- " + list.ProductID + " " + "UserID:- " + list.UserID
+                      + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "IsLike:- " + list.isLike);
+            }
+        }
+
+
     }
-}
+    }
     
