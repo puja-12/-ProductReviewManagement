@@ -42,7 +42,7 @@ namespace ProductReviewManagement
             productReviewList.Add(new ProductReview() { ProductID = 24, UserID = 12, Rating = 3, Review = "Bad", isLike = true });
             productReviewList.Add(new ProductReview() { ProductID = 25, UserID = 12, Rating = 6, Review = "Good", isLike = false });
 
-            Console.WriteLine("Select \n1)Create ProductReview Class with 25 Default values\n2)Retrive Top 3 Records of Top 3 Rating Values\n3)Details from Records with product Id(1,4,9) with rating>3\n4)count review of each product id\n5) retrieve product id or review only\n6) skip top 5 Records\n7)create datatable\n8)Retreive details who's islike value is true\n9)Average rating ");
+            Console.WriteLine("Select \n1)Create ProductReview Class with 25 Default values\n2)Retrive Top 3 Records of Top 3 Rating Values\n3)Details from Records with product Id(1,4,9) with rating>3\n4)count review of each product id\n5) retrieve product id or review only\n6) skip top 5 Records\n7)create datatable\n8)Retreive details who's islike value is true\n9)Retrieve Average rating\n10)Records Whose Review is Nice ");
                 
             int option = Convert.ToInt16(Console.ReadLine());
             switch (option)
@@ -79,7 +79,9 @@ namespace ProductReviewManagement
                 case 9:
                     management.AvgRating(productReviewList);
                     break;
-             
+                case 10:
+                    management.RetriveRecordsReviewIS_Nice(productReviewList);
+                    break;
                        
                 default:
                     Console.WriteLine("Please choose the correct option!");
